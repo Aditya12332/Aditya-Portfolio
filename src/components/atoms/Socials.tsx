@@ -5,7 +5,7 @@ import Link from "next/link"
 import React from 'react';
 import { useInView } from "motion/react";
 
-export default function Socials({ index, url, icon }: { index: number, id: string, url: string, icon: React.ReactNode }) {
+export default function Socials({ index, id, url, icon }: { index: number, id: string, url: string, icon: React.ReactNode }) {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -19,6 +19,7 @@ export default function Socials({ index, url, icon }: { index: number, id: strin
             <Link href={url} className="border-2 rounded-xl text-center px-2 h-10 w-10 flex items-center justify-center cursor-pointer transition-transform duration-200 hover:scale-110"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={id}
             >
                 {icon}
             </Link>
