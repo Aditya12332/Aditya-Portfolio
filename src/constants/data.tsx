@@ -1,5 +1,6 @@
 import { SvgIcons } from "@/components/svg";
 import type { StaticImageData } from "next/image";
+import profileImg from "../../public/images/profile.jpg";
 
 // ---------------------------------------------------------------------------
 // Everything personal on the site lives in this file.
@@ -12,7 +13,7 @@ export const candidateInfo = {
   tagline: "A Full Stack Developer building with Django, React & AI",
   location: "Kolkata, India",
   // Square photo shown in the About section. Set to "" to show your initials instead.
-  profileImg: "" as string | StaticImageData,
+  profileImg: profileImg as string | StaticImageData,
   // Public Google Drive link, so the resume can be updated without redeploying the site.
   resumeLink: "https://drive.google.com/file/d/1GhvcSsZnvTXE5zSnq7x2v8ZPeTG4sPSz/view?usp=sharing",
 };
