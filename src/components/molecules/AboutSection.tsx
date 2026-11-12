@@ -15,6 +15,7 @@ import Socials from "../atoms/Socials";
 import FadeUp from "../atoms/FadeUp";
 import TiltIn from "../atoms/TiltIn";
 import CurvedArrow from "../atoms/CurvedArrow";
+import ExperienceDetails from "../atoms/ExperienceDetails";
 
 const noteColors = [
   "bg-[#B8FFC6]",
@@ -179,6 +180,7 @@ export function AboutSection() {
                         {experience.description}
                       </p>
                     </FadeUp>
+                    <ExperienceDetails points={experience.detailedExperience} />
                   </div>
                 );
               }
