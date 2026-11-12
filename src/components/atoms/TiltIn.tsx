@@ -3,6 +3,7 @@
 import { motion } from "motion/react"
 import React, { ReactNode } from 'react';
 import { useInView } from "motion/react";
+import { useCanDrag } from "@/lib/useCanDrag";
 
 interface TiltInProps {
     children: ReactNode;
@@ -15,11 +16,12 @@ export default function TiltIn({
 }: TiltInProps) {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.5 });
+    const canDrag = useCanDrag();
 
     return (
         <motion.div
             ref={ref}
-            drag
+            drag={canDrag}
             initial={{ x: 0, y: 0, opacity: 1, rotate: 30 }}
             animate={isInView ? { x: 0, y: 0, opacity: 1, rotate: 0 } : { x: 0, y: 0, opacity: 1, rotate: 30 }}
             whileHover={{ scale: 1.1, rotate: 0, transition: { duration: 0.2 } }}
