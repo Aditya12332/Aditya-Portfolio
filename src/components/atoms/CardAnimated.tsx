@@ -1,10 +1,12 @@
 "use client";
 import { motion } from "motion/react";
+import { useCanDrag } from "@/lib/useCanDrag";
 
 export function HiCard() {
+    const canDrag = useCanDrag();
     return (
         <motion.div
-            drag
+            drag={canDrag}
             initial={{ x: 70, y: 70, opacity: 0, rotate: -20 }}
             animate={{ x: 0, y: 0, opacity: 1, rotate: -7 }}
             whileHover={{ scale: 1.1, rotate: 0, transition: { duration: 0.2 } }}
@@ -17,9 +19,10 @@ export function HiCard() {
 
 
 export function EmployeeStatusCard() {
+    const canDrag = useCanDrag();
     return (
         <motion.div
-            drag
+            drag={canDrag}
             initial={{ x: -70, y: 70, opacity: 0, rotate: 20 }}
             animate={{ x: 0, y: 0, opacity: 1, rotate: 10 }}
             whileHover={{ scale: 1.1, rotate: 0, transition: { duration: 0.2 } }}

@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 
 //// 720, 256
@@ -8,7 +8,7 @@ import { motion } from "framer-motion"
 //top border
 export const HorizontalLineCurved1 = () => {
     return (
-        <svg width="" height="1000" >
+        <svg width="100%" height="1000">
             <motion.path
                 stroke="#474747"
                 strokeWidth="3"
@@ -23,7 +23,7 @@ export const HorizontalLineCurved1 = () => {
 //bottom border
 export const HorizontalLineCurved2 = () => {
     return (
-        <svg width="" >
+        <svg width="100%">
             <motion.path
                 stroke="#474747"
                 strokeWidth="3"

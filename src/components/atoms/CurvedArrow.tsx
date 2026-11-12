@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import { useRef } from "react";
 
 const CurvedArrow = () => {
@@ -8,7 +8,8 @@ const CurvedArrow = () => {
     const isInView = useInView(ref, { once: true, amount: 0.5 });
     return (
         <motion.svg
-            className="w-full max-w-md"
+            className="w-full h-full overflow-visible"
+            viewBox="45 5 110 100"
             ref={ref}
         >
             <motion.path

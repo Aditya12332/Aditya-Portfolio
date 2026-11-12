@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const HoverLinkLine = ({ isHovered }: { isHovered: boolean }) => {
     return (
-        <svg width="170" height="50" viewBox="0 0 180 20" className="absolute bottom-[-30px] left-5">
+        <svg width="170" height="50" viewBox="0 0 180 20" className="absolute bottom-[-30px] left-5 pointer-events-none">
             <motion.path
                 stroke="#474747"
                 strokeWidth="3"

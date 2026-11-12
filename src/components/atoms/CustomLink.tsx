@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import HoverLinkLine from './HoverLinkLine';
 import FadeUp from './FadeUp';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Link from 'next/link';
 
 const CustomLink = ({ icon, label, link, newTab = false }: { icon: string, label: string, link: string, newTab?: boolean }) => {

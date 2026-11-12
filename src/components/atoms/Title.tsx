@@ -14,7 +14,7 @@ export function Title({ label }: { label: string }) {
             transition={{ duration: 1.2, type: "spring", damping: 10, stiffness: 100 }}
             className="flex items-center justify-center gap-10 w-full">
             <div className="hidden md:block w-[100px] h-[3px] bg-grid-small bg-[#474747] rounded"></div>
-            <h1 className="text-center text-[52px] font-bold text-[#474747]">{label}</h1>
+            <h2 className="text-center text-[52px] font-bold text-[#474747]">{label}</h2>
             <div className="hidden md:block w-[100px] h-[3px] bg-grid-small bg-[#474747] rounded"></div>
         </motion.div>
     )
