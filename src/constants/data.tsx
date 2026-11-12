@@ -1,347 +1,153 @@
 import { SvgIcons } from "@/components/svg";
-import profileImg2 from "../../public/images/profileImg2.png";
-import videoLibraryImg from "../../public/images/videoLibrary.png";
-import componentLibrary from "../../public/images/componentLibrary.webp";
-import ecom from "../../public/images/ecom.webp";
-import blogMemo from "../../public/images/blogMemo.png";
-import createNpmImg from "../../public/images/createNpm.png";
-import splitzy from "../../public/images/splitzy.png";
+import type { StaticImageData } from "next/image";
+
+// ---------------------------------------------------------------------------
+// Everything personal on the site lives in this file.
+// ---------------------------------------------------------------------------
 
 export const candidateInfo = {
-  name: "Juvita Saini",
-  email: "juvitasaini@gmail.com",
-  tagline: "A passionate Frontend Developer",
-  portfolio: "https://juvitasaini09.github.io/portfolio/",
-  profileImg2: profileImg2,
-  mediumLink: "https://medium.com/@juvitasaini",
-  resumeLink:
-    "https://drive.google.com/file/d/1oVSCJYKD0quOaoM0pB58Awwi8wu1KLdo/view?usp=drive_link",
+  name: "Aditya Sultania",
+  initials: "AS",
+  email: "adityasultania123321@gmail.com",
+  tagline: "A Full Stack Developer building with Django, React & AI",
+  location: "Kolkata, India",
+  // Square photo shown in the About section. Set to "" to show your initials instead.
+  profileImg: "" as string | StaticImageData,
+  // Public Google Drive link, so the resume can be updated without redeploying the site.
+  resumeLink: "https://drive.google.com/file/d/1GhvcSsZnvTXE5zSnq7x2v8ZPeTG4sPSz/view?usp=sharing",
 };
 
 export const socialLinks = [
-  { id: "twitter", url: "https://x.com/SainiJuvita", Icon: SvgIcons.Twitter },
   {
     id: "linkedin",
-    url: "https://www.linkedin.com/in/juvitasaini/",
+    url: "https://www.linkedin.com/in/aditya-sultania-a6815a268/",
     Icon: SvgIcons.LinkedIn,
   },
   {
     id: "github",
-    url: "https://github.com/JuvitaSaini09",
+    url: "https://github.com/Aditya12332",
     Icon: SvgIcons.Github,
   },
   {
     id: "leetcode",
-    url: "https://leetcode.com/u/Juvita_Saini/",
+    url: "https://leetcode.com/u/Aditya__1211/",
     Icon: SvgIcons.LeetCode,
   },
-  {
-    id: "medium",
-    url: "https://medium.com/@juvitasaini",
-    Icon: SvgIcons.Medium,
-  }
 ];
+
+// The sticky notes in the About section.
+export const highlights = [
+  "Associate SDE @ TexAu",
+  "250+ Automations Owned",
+  "550+ DSA Problems Solved",
+  "Top 5 of 180 at Smart Coder",
+  "Best Final Year Project Award",
+  "Django & RAG is love",
+];
+
 export const skills = [
-  "HTML5",
+  "Python",
   "JavaScript",
-  "React.js",
-  "Next.JS",
   "TypeScript",
-  "CSS3",
+  "SQL",
+  "C++",
+  "Django",
+  "DRF",
+  "FastAPI",
+  "Node.js",
+  "Express.js",
+  "React.js",
+  "Next.js",
   "Tailwind CSS",
-  "Material-UI",
-  "Ant Design",
-  "Recharts",
-  "Git",
-  "GitHub",
-  "Cypress",
-  "Socket.io",
-  "Prisma",
-  "Learning Backend",
+  "PostgreSQL",
+  "MongoDB",
+  "Redis",
+  "Vector DB",
+  "RAG",
+  "Agentic AI",
+  "Docker",
+  "AWS",
+  "Sentry",
 ];
 
 export const experience = [
   {
-    company: "NimbusNext",
-    role: "Jr. Software Associate",
-    duration: "Aug, 2025 - Present",
+    company: "TexAu",
+    role: "Associate Software Developer",
+    duration: "Sep, 2026 - Present",
     description:
-      "Developing production-grade SaaS features using Next.js, AI integrations, and secure authentication workflows to deliver scalable and intelligent user experiences. ⚡",
+      "Own 250+ automations across 10 platforms and built an automated QA system that tests 365 endpoints daily, replacing 2.5 hrs/day of manual testing.",
     detailedExperience: [
-      "Built production-ready features using Next.js 15+, TypeScript, and Tailwind CSS in a fast-paced SaaS environment.",
-      "Implemented secure SSO authentication and migrated sensitive tokens from client-side to server-side using Next.js Server Actions, improving application security.",
-      "Extracted and modularized internal reports from a large monorepo into independent repositories to improve maintainability and deployment workflows.",
-      "Developed a rich text editor with advanced formatting features using the Tiptap framework.",
-      "Integrated RAG vector APIs and engineered LLM prompts to deliver context-aware AI responses.",
-      "Worked with Prisma ORM along with PostgreSQL and MongoDB for efficient data modeling and querying.",
-      "Collaborated across teams to deliver scalable features aligned with product and system architecture goals."
+      "Planned and built an automated QA system that tests 365 automation endpoints and sends daily reports, replacing 2.5 hrs/day of manual testing.",
+      "Built and shipped 13 Reddit automations with auth checks and integrated them into the products.",
+      "Owned automations for 10 platforms, 250+ automations in total: analyzed endpoints, added them to the automation engine, and normalized responses across 13 providers.",
+      "Fixed bugs across the frontend, backend and browser extension (TypeScript, JavaScript, FastAPI) and resolved 60+ Sentry issues and 25+ QA-reported issues.",
     ],
   },
   {
-    company: "CarbonMinus",
-    role: "Frontend Developer",
-    duration: "Sep, 2023 - Feb, 2025",
+    company: "Renan",
+    role: "Full Stack Developer Intern",
+    duration: "May, 2025 - Nov, 2025",
     description:
-      "Built scalable, high-performance UI components, improving responsiveness and user engagement through optimized rendering and efficient state management.🚀",
+      "Built and maintained 30+ production REST APIs with Django REST Framework, designed multi-level RBAC and passwordless auth, and shipped features that helped convert 2 POC clients into signed agreements.",
     detailedExperience: [
-      "Developed a real-time alert feature using Socket.io for instant notifications.",
-      "Implemented various charts using Recharts to visualize data effectively.",
-      "Initially worked with Ant Design but later transitioned the project to Material UI for better flexibility and customization.",
-      "Integrated features like dark theme, layout, routing, and navigation to enhance user experience.",
-      "Wrote test cases in Cypress to ensure code quality and functionality.",
-      "Used Styled Components throughout the project for modular and maintainable CSS.",
-      "Added a download feature across the project, allowing users to download charts and specific UI components.",
-      "Worked on bug fixing and error tracking using Sentry to monitor live issues and improve stability.",
-      "Independently developed a new feature with a junior backend developer, successfully merging it into the main project without senior assistance.",
-      "Integrated React Google Maps for dynamic location tracking and custom map views.",
-      "Created comprehensive documentation and README files to improve project understanding and team collaboration.",
-      "Advised transitioning from Create React App (CRA) to Vite for a better development experience and performance improvements.",
+      "Built and maintained 30+ production REST APIs using Django REST Framework, supporting core user, project, and admin workflows in a live production environment.",
+      "Shipped backend features that helped convert 2 POC clients into signed agreements.",
+      "Designed a multi-level RBAC system across users, groups, and projects, enabling flexible permission control and secure access management.",
+      "Implemented passwordless authentication using AWS SES with expiring email verification links and rate limiting.",
+      "Optimized high-traffic APIs by restructuring database queries and reducing payload size.",
     ],
   },
 ];
 
-export const mainProjects = [
+export const education = {
+  institute: "B.P. Poddar Institute of Management and Technology",
+  degree: "B.Tech in Information Technology",
+  duration: "Aug, 2022 - Jul, 2026",
+};
+
+export type Project = {
+  title: string;
+  description: string;
+  link: string;
+  liveLink: string;
+  // Optional cover image (tall, ~13:24, used in the desktop card).
+  // Without one, the card shows a coloured placeholder with the title.
+  imgUrl?: StaticImageData | string;
+  // Optional wide version (~3:2) used on phones; falls back to imgUrl.
+  imgUrlWide?: StaticImageData | string;
+  category: string;
+  technologies: string;
+};
+
+export const mainProjects: Project[] = [
   {
-    title: "Splitzy",
+    title: "Place Reviews AI",
     description:
-      "Splitzy is a smart and modern expense management tool. Built using Next.js and Convex DB, it allows users to manage shared and individual expenses, generate customized email notifications, and settle balances—all from a slick, intuitive dashboard.Authentication is handled via Clerk, while background tasks such as reminder emails are managed through Inngest.Emails are beautifully formatted using Gemini API and delivered through Resend",
-    link: "https://github.com/JuvitaSaini09/Splitzy",
-    imgUrl: splitzy,
-    liveLink: "https://splitzy.netlify.app/",
+      "A semantic search and recommendation system for discovering places, built on a RAG pipeline with Django, ChromaDB and LLM APIs. 24 REST APIs combine HNSW-based ANN search with cosine-similarity filtering before LLM context injection, retrieving from 1.5K+ embeddings in ~20ms. Backed by 73 Pytest tests covering auth, RBAC and the APIs.",
+    link: "https://github.com/Aditya12332/Place-Review-System",
+    liveLink: "",
+    category: "Full stack AI project",
+    technologies: "Django, Python, RAG, ChromaDB, PostgreSQL, React.js, Docker, Redis",
+  },
+  {
+    title: "JobSentry",
+    description:
+      "An automated job-alert pipeline that polls 250+ companies across five applicant tracking systems (Workday, Greenhouse, Lever, Ashby, SmartRecruiters) every 60 seconds. A multi-stage filter (seniority regex, keyword allow/block lists, location, 24-hour recency) cuts 5,000+ raw postings down to relevant entry-level roles. MongoDB atomic upserts guarantee exactly-once Discord alerts, with exponential backoff on rate limits.",
+    link: "https://github.com/Aditya12332/Job-Scrapper",
+    liveLink: "",
+    category: "Backend automation",
+    technologies: "Node.js, MongoDB, Axios, node-cron, Discord Webhooks, Oracle Cloud, PM2",
+  },
+  {
+    title: "Axora AI",
+    description:
+      "A real-time chat app with a built-in AI assistant. 15 REST APIs and Socket.io event handlers power auth, messaging, AI chat and user management, with sub-100ms message latency, online presence and typing indicators. The backend is organised into reusable controllers, services and middleware.",
+    link: "https://github.com/Aditya12332/chat-app",
+    liveLink: "",
     category: "Full stack project",
-    technologies: "NextJS, TailwindCSS, Shadcn, Convex DB, OpenAI, Inngest",
-    date: "",
-  },
-  {
-    title: "Ani World",
-    description:
-      "This is a video library for anime lovers. This is a front-end project. It has mainly the following features: Home, Playlists, Liked, Watch Later, History. Technologies used are: ReactJS, Mockbee for mock backend.",
-    link: "https://github.com/JuvitaSaini09/quartz-video-lib-react",
-    imgUrl: videoLibraryImg,
-    liveLink: "https://quartz-video-library.netlify.app/",
-    category: "Neog Major Project",
-    technologies: "ReactJS, Mockbee",
-    date: "",
-  },
-  {
-    title: "Component Library",
-    description:
-      "BuildUI is a component library built using HTML and CSS. You can use this component library in your projects. With the help of this library, you don’t need to code from scratch; you just pick components.",
-    link: "https://github.com/JuvitaSaini09/build-ui-cl",
-    imgUrl: componentLibrary,
-    liveLink: "https://build-ui-component-library.netlify.app/",
-    category: "Neog Major Project",
-    technologies: "HTML, CSS",
-    date: "",
-  },
-  {
-    title: "Ecommerce Store",
-    description:
-      "Quartz Book Store is an e-commerce website. It is made with HTML and CSS. It has the following features: Home Page, Product Listing Page, Filters by option (three categories), Cart Management, Wishlist Management, and Authentication page.",
-    link: "https://github.com/JuvitaSaini09/quartz-ecom-react",
-    imgUrl: ecom,
-    liveLink: "https://quartz-ecom-books.netlify.app/",
-    category: "Neog Major Project",
-    technologies: "HTML, CSS",
-    date: "",
+    technologies: "Express.js, MongoDB, React.js, Groq LLM API, Tailwind CSS, Socket.io",
   },
 ];
 
-export const projects = [
-  ...mainProjects,
-  {
-    title: "WEB BUDDIES: Cool design",
-    description:
-      "This is a static page with multiple sections including Hero Section, Navbar, Featured Products, etc.",
-    link: "",
-    imgUrl: "",
-    liveLink: "https://webbuddies.netlify.app/",
-    category: "UI Practice",
-    technologies: "",
-    date: "July, 2023",
-  },
-  {
-    title: "Quiz App",
-    description:
-      "Quiz App consists of multiple categories. It consists of MCQ questions. For every right question, you will be awarded 10 scores. The score page will be shown at the end.",
-    link: "https://github.com/JuvitaSaini09/quiz-mini-app",
-    imgUrl: "",
-    liveLink: "https://indiaquiz.netlify.app/",
-    category: "Neog Mini Project",
-    technologies: "",
-    date: "",
-  },
-  {
-    title: "Customize Umbrella",
-    description:
-      "This project has one page which is responsive. It has an umbrella with three colors. A logo on the umbrella can be added from the local system.",
-    link: "https://github.com/JuvitaSaini09/Custimize-umbrella2",
-    imgUrl: "",
-    liveLink: "https://custom-umbrella2.netlify.app/",
-    category: "Mini Project",
-    technologies: "",
-    date: "April, 2023",
-  },
-  {
-    title: "Pomodoro App",
-    description:
-      "Pomodoro App is used for productivity in doing tasks. It has features like adding a task, editing/deleting a task, Pomodoro timer, and start/pause/reset clock.",
-    link: "https://github.com/JuvitaSaini09/Pomodoro",
-    imgUrl: "",
-    liveLink: "https://todo-pomodoro.netlify.app/",
-    category: "Neog Mini Project",
-    technologies: "",
-    date: "",
-  },
-  {
-    title: "How well do you know me?",
-    description:
-      "A CLI app built with NodeJS. Send this to your friend and see how much your friend knows you.",
-    link: "https://github.com/JuvitaSaini09/Do-You-know-me-quiz",
-    imgUrl: "",
-    liveLink: "https://replit.com/@JuvitaSaini/Project1?embed=true",
-    category: "MARK 1",
-    technologies: "NodeJS",
-    date: "August, 2021",
-  },
-  {
-    title: "Are you a Bollywood fan?",
-    description:
-      "Do you watch Bollywood movies? Play the quiz and see how much you know about Bollywood.",
-    link: "https://github.com/JuvitaSaini09/Quiz-on-Bollyood",
-    imgUrl: "",
-    liveLink: "https://replit.com/@JuvitaSaini/Ass1?embed=true",
-    category: "MARK 2",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "This is a portfolio website. It includes my introduction, projects, and blogs section.",
-    link: "https://github.com/JuvitaSaini09/MyPortfolio",
-    imgUrl: "",
-    liveLink: "https://juvitasaini-portfolio.netlify.app/",
-    category: "MARK 4",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Minion Speak App",
-    description:
-      "This app converts English to the banana language. It is made with VanillaJS.",
-    link: "https://github.com/JuvitaSaini09/Minion-Speak-App",
-    imgUrl: "",
-    liveLink: "https://minion-bananana-talk.netlify.app/",
-    category: "MARK 6",
-    technologies: "VanillaJS",
-    date: "August, 2021",
-  },
-  {
-    title: "Ferb Translation App",
-    description:
-      "This is a translation app built using VanillaJS. This app converts English to Ferb Latin.",
-    link: "https://github.com/JuvitaSaini09/Ferb-latin-translation",
-    imgUrl: "",
-    liveLink: "https://ferb-latin-langaguage-converter.netlify.app/",
-    category: "MARK 7",
-    technologies: "VanillaJS",
-    date: "August, 2021",
-  },
-  {
-    title: "Animal Emoji Interpreter",
-    description:
-      "This is an emoji interpreter web app. This web app translates the meaning of animal emojis.",
-    link: "https://github.com/JuvitaSaini09/Animal-Interpreter",
-    imgUrl: "",
-    liveLink: "https://4ds8s.csb.app/",
-    category: "MARK 8",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "My Favourite Food List",
-    description:
-      "In this app, you can know some of my favorite foods. This app is built using ReactJS.",
-    link: "https://github.com/JuvitaSaini09/MyFavFoodList",
-    imgUrl: "",
-    liveLink: "https://715qk.csb.app/",
-    category: "MARK 9",
-    technologies: "ReactJS",
-    date: "August, 2021",
-  },
-  {
-    title: "Cash Register",
-    description:
-      "Enter the bill and cash given by the customer, and this app will tell you the minimum number of notes required to return the change.",
-    link: "https://github.com/JuvitaSaini09/Cash-Register",
-    imgUrl: "",
-    liveLink: "https://cash-resgister.netlify.app/",
-    category: "MARK 10",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Is Your Birthday Lucky?",
-    description:
-      "This is a fun web app that tells whether your birthday is lucky or not.",
-    link: "https://github.com/JuvitaSaini09/IS-MY-BIRTHDAY-LUCKY",
-    imgUrl: "",
-    liveLink: "https://is-my-birthday-lucky.netlify.app/",
-    category: "MARK 11",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Fun With Triangles",
-    description:
-      "In this app, you can check whether given angles can form a triangle, calculate the hypotenuse, sum of angles, take a quiz related to triangles, and calculate the area of a triangle.",
-    link: "https://github.com/JuvitaSaini09/fun-with-triangles",
-    imgUrl: "",
-    liveLink: "https://fun-with-triangle-in-maths.netlify.app/",
-    category: "MARK 12",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Is Your Birthday A Palindrome?",
-    description:
-      "In this app, you can check whether your birthday is a palindrome or not.",
-    link: "https://github.com/JuvitaSaini09/Is-Your-Birthday-A-Palindrome",
-    imgUrl: "",
-    liveLink: "https://birthday-palindrome-web-app.netlify.app/",
-    category: "MARK 13",
-    technologies: "",
-    date: "August, 2021",
-  },
-  {
-    title: "Profit and Loss Calculator",
-    description:
-      "In this app, you can know whether your stocks are in profit or loss.",
-    link: "https://github.com/JuvitaSaini09/Profit-and-loss-calculator",
-    imgUrl: "",
-    liveLink: "https://profit-and-loss.netlify.app/",
-    category: "MARK 14",
-    technologies: "",
-    date: "August, 2021",
-  },
-];
-
-export const blogs = [
-  {
-    title: "useMemo vs memo in React",
-    link: "https://medium.com/@juvitasaini/usememo-vs-memo-in-react-8c9da370dbdc",
-    imgUrl: blogMemo,
-    description:
-      "When optimizing performance in a React application, two useful tools at your disposal are useMemo and memo. While both serve the purpose of optimization, they are used in different scenarios and ways. Let's explore these differences with examples...",
-  },
-  {
-    title: "Create Your Own NPM Package",
-    link: "https://medium.com/@juvitasaini/how-to-create-your-own-npm-package-a-step-by-step-guide-88c0005f9698",
-    imgUrl: createNpmImg,
-    description:
-      "Have you ever wanted to share your JavaScript code with the world and make it easily accessible for others to use in their projects? Creating your own NPM (Node Package Manager) package allows you to do just that! In this step-by-step guide, we will walk you through the process of creating and publishing your very own NPM package...",
-  },
-];
-
-// When optimizing performance in a React application, two useful tools at your disposal are useMemo and memo. While both serve the purpose of optimization, they are used in different scenarios and ways. Let's explore these differences with examples.
+export const projects = [...mainProjects];
