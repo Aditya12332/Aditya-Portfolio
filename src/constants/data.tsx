@@ -1,6 +1,13 @@
 import { SvgIcons } from "@/components/svg";
 import type { StaticImageData } from "next/image";
 import profileImg from "../../public/images/profile.jpg";
+// Project covers: "tall" is shown in the desktop card, "wide" on phones.
+import placeTall from "../../public/images/projects/place-tall.jpg";
+import placeWide from "../../public/images/projects/place-wide.jpg";
+import jobTall from "../../public/images/projects/job-tall.jpg";
+import jobWide from "../../public/images/projects/job-wide.jpg";
+import axoraTall from "../../public/images/projects/axora-tall.jpg";
+import axoraWide from "../../public/images/projects/axora-wide.jpg";
 
 // ---------------------------------------------------------------------------
 // Everything personal on the site lives in this file.
@@ -128,6 +135,8 @@ export const mainProjects: Project[] = [
       "A semantic search and recommendation system for discovering places, built on a RAG pipeline with Django, ChromaDB and LLM APIs. 24 REST APIs combine HNSW-based ANN search with cosine-similarity filtering before LLM context injection, retrieving from 1.5K+ embeddings in ~20ms. Backed by 73 Pytest tests covering auth, RBAC and the APIs.",
     link: "https://github.com/Aditya12332/Place-Review-System",
     liveLink: "",
+    imgUrl: placeTall,
+    imgUrlWide: placeWide,
     category: "Full stack AI project",
     technologies: "Django, Python, RAG, ChromaDB, PostgreSQL, React.js, Docker, Redis",
   },
@@ -137,6 +146,8 @@ export const mainProjects: Project[] = [
       "An automated job-alert pipeline that polls 250+ companies across five applicant tracking systems (Workday, Greenhouse, Lever, Ashby, SmartRecruiters) every 60 seconds. A multi-stage filter (seniority regex, keyword allow/block lists, location, 24-hour recency) cuts 5,000+ raw postings down to relevant entry-level roles. MongoDB atomic upserts guarantee exactly-once Discord alerts, with exponential backoff on rate limits.",
     link: "https://github.com/Aditya12332/Job-Scrapper",
     liveLink: "",
+    imgUrl: jobTall,
+    imgUrlWide: jobWide,
     category: "Backend automation",
     technologies: "Node.js, MongoDB, Axios, node-cron, Discord Webhooks, Oracle Cloud, PM2",
   },
@@ -146,6 +157,8 @@ export const mainProjects: Project[] = [
       "A real-time chat app with a built-in AI assistant. 15 REST APIs and Socket.io event handlers power auth, messaging, AI chat and user management, with sub-100ms message latency, online presence and typing indicators. The backend is organised into reusable controllers, services and middleware.",
     link: "https://github.com/Aditya12332/chat-app",
     liveLink: "",
+    imgUrl: axoraTall,
+    imgUrlWide: axoraWide,
     category: "Full stack project",
     technologies: "Express.js, MongoDB, React.js, Groq LLM API, Tailwind CSS, Socket.io",
   },
