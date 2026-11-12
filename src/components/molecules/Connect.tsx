@@ -13,7 +13,7 @@ const Connect = () => {
       <div className="flex flex-col gap-4">
         <a
           href={`mailto:${candidateInfo.email}`}
-          className="relative text-[38px] font-extralight text-[#474747] group gaegu-font"
+          className="relative text-[24px] sm:text-[38px] font-extralight text-[#474747] group gaegu-font break-all text-center"
         >
           {candidateInfo.email}
           <span className="absolute bottom-[13px] block h-[3px] w-0 bg-[#474747] transition-all duration-0 group-hover:w-full"></span>

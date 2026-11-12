@@ -12,7 +12,7 @@ const HeroSection = () => {
             </div>
 
             {/* child2 */}
-            <div className="md:absolute  top-[50%]  bottom-[-186px] right-[0]  w-[256px]">
+            <div className="relative md:absolute md:top-[calc(50%+90px)] md:right-0 w-[300px] h-[230px] shrink-0">
                 <div className="relative">
                     <HiCard />
 
